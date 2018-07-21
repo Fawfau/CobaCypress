@@ -1,0 +1,13 @@
+{
+  "name": "coba-lagi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
