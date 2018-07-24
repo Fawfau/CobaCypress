@@ -1,6 +1,7 @@
 describe('Login Page', function () {
   it('Login', function () {
   	cy.visit('http://otmproduct.cartenzgroup.com')
+  	cy.reload()
   	cy.get('#login_button').should('be.visible')
   	cy.get('#userid_field').type('flocs').should('have.value','flocs')
   	cy.get('#password_field').type('coflocs!')
@@ -11,30 +12,45 @@ describe('Login Page', function () {
 })
 
 describe('Landing Page',function () {
+	beforeEach(function(){
+	cy.reload()
+	cy.visit('http://otmproduct.cartenzgroup.com')
+	cy.get('#userid_field').type('flocs').should('have.value','flocs')
+  	cy.get('#password_field').type('coflocs!')
+	cy.get('#login_button').click()
+	})
+
 	it('Akses ke Landing Page', function () {
 		cy.get('#\\31 _menu > span > div > h4').contains('Manajemen Dasbor').click()
 		cy.get('.title-menu').should('have.text','Dasbor')
 	})
-	it.skip('Next Slide', function () {
+
+	it('Next Slide', function () {
+		cy.get('#\\31 _menu > span > div > h4').contains('Manajemen Dasbor').click()
 		cy.get('.glyphicon.glyphicon-chevron-right').click()
 		cy.get('.header').contains('Status Objek Pajak')
 		cy.get('.glyphicon.glyphicon-chevron-right').click()
 		cy.get('.header').contains('Transaksi Usaha')
 	})
-	it.skip('Prev Slide', function () {
-		cy.wait(500)
+
+	it('Prev Slide', function () {
+		cy.get('#\\31 _menu > span > div > h4').contains('Manajemen Dasbor').click()
 		cy.get('.glyphicon.glyphicon-chevron-left').click()
 		cy.get('.header').contains('Transaksi Usaha')
 		cy.get('.glyphicon.glyphicon-chevron-left').click()
 		cy.get('.header').contains('Status Objek Pajak')
 	})
+
 	it('Akses ke OTM Page', function () {
-		cy.reload()
-		cy.get('#userid_field').type('flocs').should('have.value','flocs')
-  		cy.get('#password_field').type('coflocs!')
-  		cy.get('#login_button').click()
 		cy.get('#\\31 _menu > span > div > h4').contains('Manajemen Dasbor').click()
 		cy.get('.title-menu').should('have.text','Dasbor')
 		cy.get('.btn.btn-primary.pull-right').eq(0).click()
 	})
+
+	it('Akses ke Tax Analytiv', function () {
+		cy.get('#\\31 _menu > span > div > h4').contains('Manajemen Dasbor').click()
+		cy.get('.title-menu').should('have.text','Dasbor')
+		cy.get('.btn.btn-primary.pull-right').eq(1).click()
+	})
+
 })

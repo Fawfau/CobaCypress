@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="22.999000000000002" tests="5" failures="0" skipped="2">
-  <testsuite name="Root Suite" timestamp="2018-07-23T06:30:52" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="39.012" tests="6" failures="1">
+  <testsuite name="Root Suite" timestamp="2018-07-23T10:04:42" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Login Page" timestamp="2018-07-23T06:30:52" tests="1" failures="0" time="6.832">
-    <testcase name="Login Page Login" time="6.832" classname="Login">
+  <testsuite name="Login Page" timestamp="2018-07-23T10:04:42" tests="1" failures="1" time="0">
+    <testcase name="Login Page Login" time="0" classname="Login">
+      <failure><![CDATA[CypressError: Timed out retrying: Expected to find element: '#login_button', but never found it.
+    at Object.cypressErr (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:68176:11)
+    at Object.throwErr (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:68141:18)
+    at Object.throwErrByPath (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:68168:17)
+    at retry (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:61850:16)
+    at http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:54003:18
+    at tryCatcher (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:7091:23)
+    at Promise._settlePromiseFromHandler (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:5113:31)
+    at Promise._settlePromise (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:5170:18)
+    at Promise._settlePromise0 (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:5215:10)
+    at Promise._settlePromises (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:5290:18)
+    at Async._drainQueue (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:2023:16)
+    at Async._drainQueues (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:2033:10)
+    at Async.drainQueues (http://otmproduct.cartenzgroup.com/__cypress/runner/cypress_runner.js:1907:14)
+    at <anonymous>]]></failure>
     </testcase>
   </testsuite>
-  <testsuite name="Landing Page" timestamp="2018-07-23T06:31:00" tests="4" failures="0" time="16.167">
-    <testcase name="Landing Page Akses ke Landing Page" time="8.471" classname="Akses ke Landing Page">
+  <testsuite name="Landing Page" timestamp="2018-07-23T10:05:00" tests="5" failures="0" time="39.012">
+    <testcase name="Landing Page Akses ke Landing Page" time="19.863" classname="Akses ke Landing Page">
     </testcase>
-    <testcase name="Landing Page Akses ke OTM Page" time="7.696" classname="Akses ke OTM Page">
+    <testcase name="Landing Page Next Slide" time="3.562" classname="Next Slide">
+    </testcase>
+    <testcase name="Landing Page Prev Slide" time="4.391" classname="Prev Slide">
+    </testcase>
+    <testcase name="Landing Page Akses ke OTM Page" time="4.677" classname="Akses ke OTM Page">
+    </testcase>
+    <testcase name="Landing Page Akses ke Tax Analytiv" time="6.519" classname="Akses ke Tax Analytiv">
     </testcase>
   </testsuite>
 </testsuites>
